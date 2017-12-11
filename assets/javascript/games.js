@@ -7,31 +7,34 @@ var computerChoice = [];
 
 var letterGuess = alphaBet[Math.floor(Math.random() * alphaBet.length)];
 
-
-
-  // Determines which key was pressed.
-
   document.onkeypress = function(event) {
       var userGuess = event.key;
+      var gameInstructions = document.getElementById("tryAgain");
+      var resetInstructions = document.createTextNode("Give it another try, press a letter key to guess!");
+      var userKeyLog = document.getElementById("yourGuess").innerHTML = userGuess;
 
       if(userGuess === letterGuess){
           userWins++;
+          yourGuess.style.color = "green";
+          //userKeyLog = userGuess;
       } else {
           userGuessLeft--;
           userLosses++;
+          yourGuess.style.color = "red";
+          //userKeyLog = userGuess;
       }
 
       if (userGuessLeft == 0){
-          alert("Sorry, you're not pyschic!")
+          alert("Sorry, guess you're not pyschic!")
           userWins = 0;
           userLosses = 0;
           userGuessLeft = 9;
           userRounds++;
+          yourGuess.style.color = "black";
       }
 
       document.getElementById("wins").innerHTML = userWins;
       document.getElementById("losses").innerHTML = userLosses;
       document.getElementById("guesses").innerHTML = userGuessLeft;
       document.getElementById("rounds").innerHTML = userRounds;
-      //document.getElementById("yourGuess").push("<li>" + userGuesses + "</li>");
   };
