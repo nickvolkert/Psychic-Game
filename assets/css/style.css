@@ -1,0 +1,26 @@
+body{
+  text-align: center;
+  background-color: #eee;
+  font-family: 'Itim', cursive;
+}
+#psychicgame{
+  width:600px;
+  margin: 40px auto 0 auto;
+  background-color: #FFF;
+  padding: 40px 0;
+  border-radius: 10px;
+}
+h1{
+  font-size: 24px;
+}
+h3{
+  font-size: 18px;
+}
+h3#tryAgain{}
+h3#yourGuess{
+  font-size: 50px;
+}
+#wins{}
+#losses{}
+#guesses{}
+#rounds{}

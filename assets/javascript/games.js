@@ -30,6 +30,7 @@ var letterGuess = alphaBet[Math.floor(Math.random() * alphaBet.length)];
           userLosses = 0;
           userGuessLeft = 9;
           userRounds++;
+          document.getElementById("yourGuess").innerHTML = "Press a key to start!";
           yourGuess.style.color = "black";
       }
 
